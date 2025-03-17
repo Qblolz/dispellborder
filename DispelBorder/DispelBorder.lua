@@ -292,13 +292,7 @@ local HasDispelPet = false
 function DispelBorder:PET_BAR_UPDATE()
 	HasDispelPet = false
 	if (eclass == "WARLOCK") then
-		local num = HasPetSpells()
-		if (num) then
-			local skillType = GetSpellBookItemInfo("Devour Magic")
-			if (skillType) then
-				HasDispelPet = true
-			end
-		end
+		HasDispelPet = true
 	end
 end
 
